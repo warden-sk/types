@@ -104,7 +104,7 @@ http
       });
 
       response.on('end', () => {
-        const a = test(fileRows(file, 3144, 3325));
+        const a = test(fileRows(file, 3148, 3329));
         const b = test(fileRows(fs.readFileSync(path.resolve(__dirname, './index.d.ts')), 24, 136));
 
         Object.entries(a).forEach(([aL, aR], i) => {
