@@ -21,7 +21,7 @@ declare global {
 }
 
 declare module 'react' {
-  interface IntrinsicElements {
+  interface GlobalJSXIntrinsicElements {
     a: $<React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>>;
     abbr: $<React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>>;
     address: $<React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>>;
