@@ -5,9 +5,5 @@
     "typescript": "^5.2.2"
   },
   "name": "@types/warden-sk",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/warden-sk/types.git"
-  },
   "version": "1.0.0"
 }
