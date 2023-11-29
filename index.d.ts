@@ -15,7 +15,7 @@ type B = {
 };
 
 declare global {
-  type $<T> = EnhancedElementAttributes & Omit<T, 'className'>;
+  type $<T> = EnhancedElementAttributes & Omit<T, keyof typeof availableJsxAttributes | 'className'>;
   type EnhancedElementAttributes = B & { className?: EncodedClassName };
   type EnhancedJSXElement<T extends keyof JSX.IntrinsicElements> = $<JSX.IntrinsicElements[T]>;
 }
@@ -199,5 +199,5 @@ declare module 'react' {
     view: $<React.SVGProps<SVGViewElement>>;
     wbr: $<React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>>;
     webview: $<React.DetailedHTMLProps<React.WebViewHTMLAttributes<HTMLWebViewElement>, HTMLWebViewElement>>;
-  }
+  };
 }
